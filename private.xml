@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Bean Vi Mode</name>
+        <appendix>additional navigation controls</appendix>
+        <appendix>Use SPACE key to enable hjkl and other operations</appendix>
+
+        <identifier>remap.bean_vi_mode</identifier>
+
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::SPACE, ModifierFlag::NONE,
+
+            @begin
+            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_bean_vi_mode,
+            @end
+
+            @begin
+            KeyCode::SPACE,
+            @end
+        </autogen>
+    </item>
+
+    <item hidden="true">
+        <identifier vk_config="true">notsave.bean_vi_mode</identifier>
+
+        <autogen>
+            __BlockUntilKeyUp__ KeyCode::SPACE
+        </autogen>
+
+        <autogen>--KeyToKey--
+            KeyCode::X, 
+            KeyCode::FORWARD_DELETE
+        </autogen>
+
+        <autogen>--KeyToKey-- 
+            KeyCode::W, 
+            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+        </autogen>
+
+        <autogen>--KeyToKey--
+            KeyCode::B, 
+            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+        </autogen>
+
+        <autogen>--KeyToKey--
+            KeyCode::KEY_0,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <autogen>--KeyToKey--
+            KeyCode::MINUS,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <autogen>--KeyToKey--
+            KeyCode::KEY_4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+    </item>
+
+    <item>
+        <name>Bean Numpad</name>
+        <appendix>Use jkluio... as numpad while pressing Tab</appendix>
+
+        <identifier>remap.bean_numpad</identifier>
+
+        <autogen>__KeyOverlaidModifier__
+            KeyCode::TAB, ModifierFlag::NONE,
+
+            @begin
+            KeyCode::VK_CONFIG_SYNC_KEYDOWNUP_notsave_bean_numpad,
+            @end
+
+            @begin
+            KeyCode::TAB,
+            @end
+        </autogen>
+    </item>
+
+    <item hidden="true">
+        <identifier vk_config="true">notsave.bean_numpad</identifier>
+
+        <autogen>
+            __BlockUntilKeyUp__ KeyCode::TAB
+        </autogen>
+
+        <autogen>--KeyToKey-- KeyCode::J, KeyCode::KEY_1 </autogen>
+        <autogen>--KeyToKey-- KeyCode::K, KeyCode::KEY_2 </autogen>
+        <autogen>--KeyToKey-- KeyCode::L, KeyCode::KEY_3 </autogen>
+
+        <autogen>--KeyToKey-- KeyCode::U, KeyCode::KEY_4 </autogen>
+        <autogen>--KeyToKey-- KeyCode::I, KeyCode::KEY_5 </autogen>
+        <autogen>--KeyToKey-- KeyCode::O, KeyCode::KEY_6 </autogen>
+
+        <autogen>--KeyToKey-- KeyCode::M, KeyCode::KEY_0 </autogen>
+        <autogen>--KeyToKey-- KeyCode::N, KeyCode::KEY_0 </autogen>
+
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, KeyCode::ENTER </autogen>
+        <autogen>--KeyToKey-- KeyCode::P, KeyCode::DELETE </autogen>
+        <autogen>--KeyToKey-- KeyCode::SPACE, KeyCode::TAB </autogen>
+    </item>
+</root>
